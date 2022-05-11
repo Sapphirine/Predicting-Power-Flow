@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Power Flow Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Power Flow</h1>
+     <h3> Enter the following values to predict if the system will converge along with an average voltage value.</h3>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="season" placeholder="Season" required="required" />
+      <input type="text" name="tomeofday" placeholder="Time of Day" required="required" />
+		  <input type="text" name="demand" placeholder="Demand" required="required" />
+      <input type="text" name="renewables" placeholder="Renewables" required="required" />
+
+      <button type="submit" class="btn">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+   <p>Click to see charts on a different page</p>
+    
+   <h1><a href="chart1">Energy Demand Forecast</a></h1>
+ </div>
+
+
+</body>
+</html>
