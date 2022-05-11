@@ -1,6 +1,6 @@
 # Final Project for Advanced Big Data Analytics - EECS E6895
 ## Power Flow Optimization using Big Data Techniques
-### Rohan Raghuraman
+### Rohan Raghuraman (rr3417@columbia.edu)
 
 ## Project Description
 
